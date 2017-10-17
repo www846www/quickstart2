@@ -12,8 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+Route::get('/login', function () {
+    return view('auth.login');
+});
+Route::get('/register', function () {
+    return view('auth.login');
+});
+
 //認證路由
 Route::auth();
 Route::get('/tasks', 'TaskController@index');
